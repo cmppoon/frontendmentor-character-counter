@@ -9,10 +9,32 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        neutral: {
+          900: "#12131A",
+          800: "#21222C",
+          700: "#2A2B37",
+          600: "#404254",
+          500: "#E4E4EF",
+          400: "#F2F2F7",
+        },
+        purple: {
+          500: "#C27CF8",
+          400: "#D3A0FA",
+        },
+        yellow: {
+          500: "#FF9F00",
+        },
+        orange: {
+          800: "#DA3701",
+          500: "#FE8159",
+        }
       },
+      boxShadow: {
+        "text-area": "0 0 10px theme('colors.purple.400')",
+      }
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/forms'),
+  ],
 } satisfies Config;

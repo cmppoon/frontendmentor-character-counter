@@ -1,101 +1,101 @@
-import Image from "next/image";
+import Logo from "@/app/components/logo";
+import Background from "./components/background";
+import ChangeThemeButton from "./components/changeThemeButton";
+import CharCountPattern from "./components/charCountPattern";
+import SentenceCountPattern from "./components/sentenceCountPattern";
+import WordCountPattern from "./components/wordCountPattern";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <main className="pb-8 text-neutral-900 sm:pt-8 sm:pb-16">
+      <Background />
+      <div className="sm:max-w-[990px] sm:mx-auto">
+        <div className="p-4 flex justify-between items-center">
+          <Logo />
+          <ChangeThemeButton className="w-[32px] h-[32px] sm:w-[44px] sm:h-[44px] p-1.5 sm:p-[11px] bg-neutral-100" />
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+
+        <div className="my-10 sm:my-12 text-neutral-900 sm:mx-[240px] mx-4">
+          <h1 className="text-[40px] font-bold text-center leading-none sm:text-[64px] tracking-[-1px]">
+            Analyze your text in real-time.
+          </h1>
+        </div>
+        <div className="px-4 flex flex-col items-start space-y-4">
+          <textarea
+            className="text-neutral-700 h-[200px] p-3 w-full rounded-xl border-2 border-neutral-500 bg-neutral-400 text-[20px] leading-[28px] tracking-[-0.6px] font-normal focus:border-purple-500 focus:ring-0 focus:shadow-text-area"
+            placeholder="Start typing here… (or paste your text)"
+          ></textarea>
+          <div className="max-sm:space-y-3 sm:flex sm:items-center sm:justify-between w-full">
+            <div className="max-sm:space-y-3 sm:flex sm:items-center sm:justify-center sm:gap-x-6">
+              <div>
+                <input
+                  type="checkbox"
+                  id="excludeSpaces"
+                  name="excludeSpaces"
+                  value="excludeSpaces"
+                  className="mr-2.5 rounded-[4px] w-4 h-4 border-1 border-neutral-900 checked:bg-purple-500 indeterminate:bg-purple-500 focus:ring-2 focus:ring-purple-500 text-purple-500"
+                />
+                <label htmlFor="excludeSpaces">Exclude Spaces</label>
+              </div>
+
+              <div>
+                <input
+                  type="checkbox"
+                  id="characterLimit"
+                  name="characterLimit"
+                  value="characterLimit"
+                  className="mr-2.5 rounded-[4px] w-4 h-4 border-1 border-neutral-900 checked:bg-purple-500 indeterminate:bg-purple-500 focus:ring-2 focus:ring-purple-500 text-purple-500"
+                />
+                <label htmlFor="characterLimit">Set Character Limit</label>
+              </div>
+            </div>
+            <p>Approx. reading time: minutes</p>
+          </div>
+        </div>
+
+        <div className="px-4 mt-10 sm:mt-12 text-neutral-900 space-y-6">
+          <div className="sm:grid sm:grid-cols-3 sm:gap-x-4 sm:w-full max-sm:space-y-4">
+            <div className="p-5 rounded-xl bg-purple-400 h-[130px] relative">
+              <h2 className="mb-2 text-[40px] font-bold tracking-tight leading-none">
+                00
+              </h2>
+              <h2 className="text-[20px] leading-[28px] tracking-[-0.6px] font-normal">
+                Total Characters
+              </h2>
+              <CharCountPattern className="absolute top-0 left-10" />
+            </div>
+
+            <div className="p-5 rounded-xl bg-yellow-500 h-[130px] relative">
+              <h2 className="mb-2 text-[40px] font-bold tracking-tight leading-none">
+                00
+              </h2>
+              <h2 className="text-[20px] leading-[28px] tracking-[-0.6px] font-normal">
+                Word Count
+              </h2>
+              <WordCountPattern className="absolute top-0 left-10" />
+            </div>
+
+            <div className="p-5 rounded-xl bg-orange-500 h-[130px] relative">
+              <h2 className="mb-2 text-[40px] font-bold tracking-tight leading-none">
+                00
+              </h2>
+              <h2 className="text-[20px] leading-[28px] tracking-[-0.6px] font-normal">
+                Sentence Count
+              </h2>
+              <SentenceCountPattern className="absolute top-0 left-10" />
+            </div>
+          </div>
+          <div>
+            <h2 className="text-[24px] leading-[31.2px] tracking-[-1px] font-semibold">
+              Letter Density
+            </h2>
+
+            <p className="text-[16px] leading-[20.8px] tracking-[-0.6px]">
+              No characters found. Start typing to see letter density.
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
   );
 }
