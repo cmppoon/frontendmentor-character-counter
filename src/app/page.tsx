@@ -1,9 +1,9 @@
 import Logo from "@/app/components/logo";
 import Background from "./components/background";
 import ChangeThemeButton from "./components/changeThemeButton";
-import CharCountPattern from "./components/charCountPattern";
-import SentenceCountPattern from "./components/sentenceCountPattern";
-import WordCountPattern from "./components/wordCountPattern";
+// import CharCountPattern from "./components/charCountPattern";
+// import SentenceCountPattern from "./components/sentenceCountPattern";
+// import WordCountPattern from "./components/wordCountPattern";
 
 export default function Home() {
   return (
@@ -62,7 +62,7 @@ export default function Home() {
               <h2 className="text-[20px] leading-[28px] tracking-[-0.6px] font-normal">
                 Total Characters
               </h2>
-              <CharCountPattern className="absolute top-0 left-10" />
+              {/* <CharCountPattern className="absolute top-0 left-10" /> */}
             </div>
 
             <div className="p-5 rounded-xl bg-yellow-500 h-[130px] relative">
@@ -72,7 +72,7 @@ export default function Home() {
               <h2 className="text-[20px] leading-[28px] tracking-[-0.6px] font-normal">
                 Word Count
               </h2>
-              <WordCountPattern className="absolute top-0 left-10" />
+              {/* <WordCountPattern className="absolute top-0 left-10" /> */}
             </div>
 
             <div className="p-5 rounded-xl bg-orange-500 h-[130px] relative">
@@ -82,7 +82,7 @@ export default function Home() {
               <h2 className="text-[20px] leading-[28px] tracking-[-0.6px] font-normal">
                 Sentence Count
               </h2>
-              <SentenceCountPattern className="absolute top-0 left-10" />
+              {/* <SentenceCountPattern className="absolute top-0 left-10" /> */}
             </div>
           </div>
           <div>
