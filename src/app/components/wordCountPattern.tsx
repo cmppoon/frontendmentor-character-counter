@@ -1,41 +1,21 @@
 import React from "react";
 
-export default function WordCountPattern({className} : {className: string}) {
+export default function WordCountPattern({ className }: { className: string }) {
   return (
     <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="150"
-      height="150"
+      width="100"
+      height="130"
+      viewBox="0 0 100 130"
       fill="none"
-      viewBox="0 0 150 150"
+      xmlns="http://www.w3.org/2000/svg"
       className={className}
     >
-      <g clipPath="url(#a)">
-        <mask
-          id="b"
-          width="150"
-          height="150"
-          x="0"
-          y="0"
-          maskUnits="userSpaceOnUse"
-          style={{maskType:"luminance"}}
-        >
-          <path fill="#fff" d="M150 0H0v150h150V0Z" />
-        </mask>
-        <g mask="url(#b)">
-          <path
-            fill="#FFB844"
-            fillRule="evenodd"
-            d="M0 0h50v50H0V0Zm100 50H50v50H0v50h50v-50h50v50h50v-50h-50V50Zm0 0h50V0h-50v50Z"
-            clipRule="evenodd"
-          />
-        </g>
-      </g>
-      <defs>
-        <clipPath id="a">
-          <path fill="#fff" d="M0 0h150v150H0z" />
-        </clipPath>
-      </defs>
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M0.666504 -10H50.6665V40H0.666504V-10ZM100.666 40H50.6665V89.9997H0.666504V140H50.6665V89.9997H100.666V140H150.667V89.9997H100.666V40ZM100.666 40H150.667V-10H100.666V40Z"
+        fill="#FFB844"
+      />
     </svg>
   );
 }

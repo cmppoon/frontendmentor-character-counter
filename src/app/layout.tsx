@@ -1,5 +1,6 @@
 import localFont from 'next/font/local'
 import "./globals.css";
+import ThemeProvider from './components/themeProvider';
 
 const dmSans = localFont({
   src: [
@@ -23,8 +24,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${dmSans.className} antialiased`}
+        className={`${dmSans.className} antialiased min-h-fit`}
       >
+        <ThemeProvider />
         {children}
       </body>
     </html>
