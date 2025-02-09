@@ -13,7 +13,7 @@ export default function Background() {
         quality={100}
         fill
         sizes="100vw"
-        className="-z-50 object-cover block dark:hidden"
+        className="-z-50 block object-cover dark:hidden"
       />
       <Image
         alt="background dark theme"
@@ -22,7 +22,7 @@ export default function Background() {
         quality={100}
         fill
         sizes="100vw"
-        className="-z-50 object-cover hidden dark:block"
+        className="-z-50 hidden object-cover dark:block"
       />
     </>
   );

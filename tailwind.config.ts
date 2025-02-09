@@ -27,15 +27,15 @@ export default {
         orange: {
           800: "#DA3701",
           500: "#FE8159",
-        }
+        },
       },
       boxShadow: {
         "text-area": "0 0 10px theme('colors.purple.400')",
-      }
+        "text-area-error": "0 0 10px theme('colors.orange.800')",
+        "text-area-error-dark": "0 0 10px theme('colors.orange.500')",
+      },
     },
   },
-  darkMode: 'selector',
-  plugins: [
-    require('@tailwindcss/forms'),
-  ],
+  darkMode: "selector",
+  plugins: [require("@tailwindcss/forms")],
 } satisfies Config;
