@@ -28,7 +28,7 @@ export default function ThemeSwitcher({ className }: { className: string }) {
           />
         </g>
         <defs>
-          <clipPath id="a">
+          <clipPath>
             <path fill="#fff" d="M0 0h22v22H0z" />
           </clipPath>
         </defs>
@@ -51,7 +51,7 @@ export default function ThemeSwitcher({ className }: { className: string }) {
           />
         </g>
         <defs>
-          <clipPath id="a">
+          <clipPath>
             <path fill="#fff" d="M0 0h22v22H0z" />
           </clipPath>
         </defs>

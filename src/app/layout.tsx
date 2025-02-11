@@ -22,6 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
+      <title>Word Counter App</title>
       <body className={`${dmSans.className} min-h-fit antialiased`}>
         <ThemeProvider />
         {children}

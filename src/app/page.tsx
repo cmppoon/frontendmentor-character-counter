@@ -65,17 +65,17 @@ export default function Home() {
     <main className="relative pb-8 text-neutral-900 sm:pb-16 sm:pt-8 dark:text-neutral-100">
       <Background />
       <div className="sm:mx-auto sm:max-w-[990px]">
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between max-lg:p-4">
           <Logo />
           <ThemeSwitcher className="h-[32px] w-[32px] rounded-md bg-neutral-100 p-1.5 sm:h-[44px] sm:w-[44px] sm:p-[11px] dark:bg-neutral-700" />
         </div>
 
-        <div className="mx-4 my-10 sm:mx-[240px] sm:my-12">
+        <div className="mx-4 my-10 lg:mx-[240px] sm:my-12">
           <h1 className="text-center text-[40px] font-bold leading-none tracking-[-1px] sm:text-[64px]">
             Analyze your text in real-time.
           </h1>
         </div>
-        <div className="flex flex-col items-start space-y-4">
+        <div className="flex flex-col items-start space-y-4 max-lg:px-4">
           <textarea
             className={`h-[200px] w-full resize-none rounded-xl border-2 bg-neutral-400 p-3 text-[20px] font-normal leading-[28px] tracking-[-0.6px] text-neutral-700 focus:ring-0 dark:bg-neutral-800 dark:text-neutral-200 dark:placeholder:text-neutral-200 ${
               error
@@ -154,14 +154,14 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="mt-10 space-y-6 sm:mt-12">
+        <div className="mt-10 space-y-6 sm:mt-12 max-lg:px-4">
           <div className="text-neutral-900 max-sm:space-y-4 sm:grid sm:w-full sm:grid-cols-3 sm:gap-x-4">
-            <div className="relative z-10 h-[130px] rounded-xl bg-purple-400 p-5">
-              <h2 className="mb-2 text-[40px] font-bold leading-none tracking-tight">
+            <div className="relative z-10 h-[130px] rounded-xl bg-purple-400 p-5 sm:h-[150px] sm:p-4">
+              <h2 className="mt-[7px] sm:mt-[10.5px] text-[40px] font-bold leading-none tracking-[-1px] sm:text-[64px]">
                 {characterCount === 0 ? "00" : characterCount}
               </h2>
-              <h2 className="text-[20px] font-normal leading-[28px] tracking-[-0.6px]">
-                Total Characters{" "}
+              <h2 className="mt-[5px] text-[20px] font-normal leading-[28px] tracking-[-0.6px]">
+                Total Characters
                 {excludeSpaces && (
                   <span className="text-[16px] leading-[20.8px] tracking-[-0.6px]">
                     (no space)
@@ -171,8 +171,8 @@ export default function Home() {
               <CharCountPattern className="absolute right-0 top-0 -z-10" />
             </div>
 
-            <div className="relative z-10 h-[130px] rounded-xl bg-yellow-500 p-5">
-              <h2 className="mb-2 text-[40px] font-bold leading-none tracking-tight">
+            <div className="relative z-10 h-[130px] rounded-xl bg-yellow-500 p-5 sm:h-[150px] sm:p-4">
+              <h2 className="mt-[7px] sm:mt-[10.5px] text-[40px] font-bold leading-none tracking-[-1px] sm:text-[64px]">
                 {wordCount === 0 ? "00" : wordCount}
               </h2>
               <h2 className="text-[20px] font-normal leading-[28px] tracking-[-0.6px]">
@@ -181,8 +181,8 @@ export default function Home() {
               <WordCountPattern className="absolute right-0 top-0 -z-10" />
             </div>
 
-            <div className="relative z-10 h-[130px] rounded-xl bg-orange-500 p-5">
-              <h2 className="mb-2 text-[40px] font-bold leading-none tracking-tight">
+            <div className="relative z-10 h-[130px] rounded-xl bg-orange-500 p-5 sm:h-[150px] sm:p-4">
+              <h2 className="mt-[7px] sm:mt-[10.5px] text-[40px] font-bold leading-none tracking-[-1px] sm:text-[64px]">
                 {sentenceCount === 0 ? "00" : sentenceCount}
               </h2>
               <h2 className="text-[20px] font-normal leading-[28px] tracking-[-0.6px]">
