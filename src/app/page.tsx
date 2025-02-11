@@ -65,7 +65,7 @@ export default function Home() {
     <main className="relative pb-8 text-neutral-900 sm:pb-16 sm:pt-8 dark:text-neutral-100">
       <Background />
       <div className="sm:mx-auto sm:max-w-[990px]">
-        <div className="flex items-center justify-between p-4">
+        <div className="flex items-center justify-between">
           <Logo />
           <ThemeSwitcher className="h-[32px] w-[32px] rounded-md bg-neutral-100 p-1.5 sm:h-[44px] sm:w-[44px] sm:p-[11px] dark:bg-neutral-700" />
         </div>
@@ -75,7 +75,7 @@ export default function Home() {
             Analyze your text in real-time.
           </h1>
         </div>
-        <div className="flex flex-col items-start space-y-4 px-4">
+        <div className="flex flex-col items-start space-y-4">
           <textarea
             className={`h-[200px] w-full resize-none rounded-xl border-2 bg-neutral-400 p-3 text-[20px] font-normal leading-[28px] tracking-[-0.6px] text-neutral-700 focus:ring-0 dark:bg-neutral-800 dark:text-neutral-200 dark:placeholder:text-neutral-200 ${
               error
@@ -154,7 +154,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="mt-10 space-y-6 px-4 sm:mt-12">
+        <div className="mt-10 space-y-6 sm:mt-12">
           <div className="text-neutral-900 max-sm:space-y-4 sm:grid sm:w-full sm:grid-cols-3 sm:gap-x-4">
             <div className="relative z-10 h-[130px] rounded-xl bg-purple-400 p-5">
               <h2 className="mb-2 text-[40px] font-bold leading-none tracking-tight">
